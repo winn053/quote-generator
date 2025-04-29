@@ -4,6 +4,7 @@ const authorText = document.getElementById('author');
 const twitterBtn = document.getElementById('x-twitter');
 const newQuoteBtn = document.getElementById('new-quote');
 const loader = document.getElementById('loader');
+console.log(twitterBtn);
 
 let apiQuotes = [];
 
@@ -11,7 +12,6 @@ let apiQuotes = [];
 function loading() {
   loader.hidden = false;
   quoteContainer.hidden = true;
-  console.log(quoteContainer.hidden);
 }
 
 // Hide Loading
@@ -59,7 +59,7 @@ async function getQuotes() {
 // Tweet Quote
 function tweetQuote() {
   const twitterUrl = `https://twitter.com/intent/tweet?text=${quoteText.textContent} - ${authorText.textContent}`;
-  console.log(twitterUrl);
+  // console.log(twitterUrl);
   window.open(twitterUrl, '_blank');
 }
 
